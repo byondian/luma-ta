@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import { LTMonogram, Wordmark } from "@/components/Brand";
@@ -27,19 +28,20 @@ const insights = [
   ["PERSPECTIVE", "Tax should follow the transaction — not the other way around", "4 MIN READ"],
 ];
 
-const heroImage = "https://images.pexels.com/photos/28912967/pexels-photo-28912967/free-photo-of-modern-copenhagen-architecture-with-shadows.jpeg?auto=compress&dpr=1&h=1100&w=1200";
-const editorialImage = "https://images.pexels.com/photos/30267851/pexels-photo-30267851.jpeg?auto=compress&cs=tinysrgb&w=1800";
+const heroImage = "https://images.unsplash.com/photo-1509837235075-21e7ccdd365c?auto=format&fit=crop&w=1920";
+const calmImage = "https://images.unsplash.com/photo-1698682191120-af117f890379?fm=jpg&ixlib=rb-4.1.0&q=80&w=2400";
+const founderAtmosphereImage = "https://images.unsplash.com/photo-1695624825850-f5307b0006ab?fm=jpg&ixlib=rb-4.1.0&q=80&w=1800";
 
 export default function Home() {
   return (
     <main>
       <div className="hero-wrap">
         <Header variant="hero" />
-        <section className="hero">
+        <section className="hero" aria-labelledby="hero-title">
           <div className="hero-content section-shell">
             <div className="hero-copy reveal">
               <p className="eyebrow eyebrow-ice">FINLAND <span>↔</span> LUXEMBOURG</p>
-              <h1>Tax structuring<br />across borders.</h1>
+              <h1 id="hero-title">Tax structuring<br />across borders.</h1>
               <p className="hero-lede">Independent cross-border tax advice for Finnish businesses, founders and investors with Luxembourg interests.</p>
               <div className="hero-actions">
                 <Link className="button button-ivory" href="/contact">Book a conversation</Link>
@@ -47,10 +49,10 @@ export default function Home() {
               </div>
               <div className="hero-signature"><LTMonogram light className="hero-mini-mark" /><span>Luxembourg-based<br />Finnish perspective</span></div>
             </div>
-            <figure className="hero-image reveal">
-              <img src={heroImage} alt="" loading="eager" />
+            <figure className="hero-image reveal" aria-label="Luminous architectural study">
+              <Image src={heroImage} alt="" fill priority sizes="(max-width: 900px) 100vw, 43vw" />
               <div className="hero-image-wash" aria-hidden="true"></div>
-              <figcaption>STRUCTURE · CLARITY · PERSPECTIVE</figcaption>
+              <figcaption>LIGHT · CLARITY · PERSPECTIVE</figcaption>
             </figure>
           </div>
         </section>
@@ -104,9 +106,9 @@ export default function Home() {
       </section>
 
       <figure className="editorial-break">
-        <img src={editorialImage} alt="Minimal architectural detail with structured light and shadow" loading="lazy" />
+        <Image src={calmImage} alt="Still water beneath a pale, misty horizon" fill sizes="100vw" />
         <div className="editorial-break-overlay" aria-hidden="true"></div>
-        <figcaption><span>Precision in structure.</span><span>Calm in execution.</span></figcaption>
+        <figcaption><span>Stillness in perspective.</span><span>Clarity in decisions.</span></figcaption>
       </figure>
 
       <section className="section direct-section">
@@ -124,8 +126,8 @@ export default function Home() {
 
       <section className="section founder-section">
         <div className="section-shell founder-grid">
-          <figure className="founder-visual">
-            <img src={editorialImage} alt="" loading="lazy" />
+          <figure className="founder-visual" aria-label="Light-filled founder portrait placeholder">
+            <Image src={founderAtmosphereImage} alt="" fill sizes="(max-width: 900px) 100vw, 42vw" />
             <div className="founder-visual-frame" aria-hidden="true"><LTMonogram className="founder-watermark" /></div>
           </figure>
           <div className="founder-copy">

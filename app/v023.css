@@ -1,0 +1,193 @@
+/* LUMA-TA v0.2.3 — Imagery & Background Rhythm
+   Uses repository-owned generated imagery and keeps the approved page architecture intact. */
+
+/* HERO — luminous material, not texture noise */
+.hero{min-height:90vh}
+.hero-content.section-shell{
+  width:100%;
+  max-width:none;
+  min-height:calc(90vh - 76px);
+  grid-template-columns:minmax(0,53%) minmax(0,47%);
+  gap:0;
+  margin:0;
+}
+.hero-copy{
+  padding:clamp(100px,11vh,142px) 4vw clamp(82px,9vh,112px) 8vw;
+}
+.hero h1{
+  max-width:700px;
+  white-space:normal!important;
+  margin:46px 0 36px;
+  font-size:clamp(70px,6.15vw,104px);
+  line-height:.91;
+}
+.hero-lede{max-width:585px}
+.hero-image{
+  min-height:calc(90vh - 76px);
+  margin:0 0 0 -160px;
+  width:calc(100% + 160px);
+  background:#edf4f4;
+}
+.hero-image img{
+  object-fit:cover;
+  object-position:48% 48%;
+  filter:saturate(.74) contrast(.91) brightness(1.06);
+  transform:scale(1.008);
+}
+.hero-image:before{
+  z-index:4;
+  width:280px;
+  background:linear-gradient(90deg,
+    var(--forest) 0%,
+    rgba(23,63,55,.96) 14%,
+    rgba(23,63,55,.72) 38%,
+    rgba(23,63,55,.34) 64%,
+    rgba(23,63,55,.08) 84%,
+    rgba(23,63,55,0) 100%);
+}
+.hero-image-wash{
+  z-index:2;
+  background:linear-gradient(110deg,rgba(225,238,240,.03),rgba(247,245,239,.09) 72%,rgba(255,255,255,.12));
+}
+
+/* LIGHT SECTION RHYTHM — subtle, not a colour-block parade */
+.central-idea,.expertise-section,.insights-section{position:relative;isolation:isolate}
+.central-idea:before,.expertise-section:before,.insights-section:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:100vw;
+  transform:translateX(-50%);
+  pointer-events:none;
+}
+.central-idea:before{
+  background:
+    radial-gradient(circle at 92% 34%,rgba(183,207,214,.17),rgba(183,207,214,0) 31%),
+    var(--paper);
+}
+.expertise-section:before{
+  background:linear-gradient(108deg,var(--paper) 0%,var(--paper) 68%,rgba(225,238,240,.34) 100%);
+}
+.expertise-item{background:rgba(247,245,239,.26)}
+.expertise-number{color:rgba(143,182,195,.20)}
+
+.geo-section{
+  background:linear-gradient(126deg,#dcebee 0%,var(--snow) 52%,#edf4f3 100%);
+}
+.geo-grid-lines{opacity:.025}
+.geo-wordmark{border-bottom-color:rgba(23,63,55,.14)}
+
+/* Generated editorial interruption — imagery adds light rather than drama */
+.editorial-break-v023{
+  position:relative;
+  height:clamp(430px,47vw,680px);
+  min-height:0;
+  margin:0;
+  overflow:hidden;
+  background:var(--snow);
+}
+.editorial-break-v023 img{
+  object-fit:cover;
+  object-position:center 50%;
+  filter:saturate(.72) contrast(.93) brightness(1.04);
+  transform:scale(1.006);
+}
+.editorial-break-v023:before{
+  content:"";
+  position:absolute;
+  z-index:2;
+  inset:0;
+  background:linear-gradient(180deg,rgba(247,245,239,.06),rgba(225,238,240,.05));
+  pointer-events:none;
+}
+.editorial-break-wash{position:absolute;inset:0;z-index:3;box-shadow:inset 0 1px rgba(23,63,55,.05),inset 0 -1px rgba(23,63,55,.05);pointer-events:none}
+
+.brand-interlude{
+  padding:clamp(118px,11vw,174px) 0;
+  background:
+    radial-gradient(circle at 83% 42%,rgba(255,255,255,.52),rgba(255,255,255,0) 31%),
+    linear-gradient(110deg,var(--snow),rgba(225,238,240,.78) 54%,var(--paper));
+}
+.brand-interlude:after{opacity:.5}
+.brand-interlude h2{max-width:900px}
+
+/* Keep authority sections solid and controlled */
+.direct-section{background:var(--forest)}
+.direct-section:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(15,45,39,.16),rgba(15,45,39,0) 42%,rgba(183,207,214,.035));
+}
+.direct-section>.section-shell{position:relative;z-index:1}
+
+/* Founder placeholder now reads as light, portrait-ready atmosphere */
+.founder-section{
+  background:linear-gradient(105deg,var(--paper) 0%,var(--paper) 45%,rgba(225,238,240,.22) 68%,rgba(225,238,240,.62) 100%);
+}
+.founder-visual{background:#edf3f2}
+.founder-visual img{
+  object-fit:cover;
+  object-position:center 48%;
+  filter:saturate(.72) contrast(.93) brightness(1.035);
+  transform:scale(1.004);
+}
+.founder-visual:after{background:linear-gradient(180deg,rgba(247,245,239,.03),rgba(225,238,240,.05))}
+.founder-visual-frame{border-color:rgba(23,63,55,.10)}
+.founder-watermark{opacity:.22}
+
+.pov-section{
+  background:
+    radial-gradient(circle at 8% 50%,rgba(143,182,195,.12),rgba(143,182,195,0) 28%),
+    linear-gradient(100deg,var(--snow) 0%,#edf4f3 48%,var(--paper) 100%);
+  border-top-color:rgba(23,63,55,.05);
+  border-bottom-color:rgba(23,63,55,.06);
+}
+.pov-mark{opacity:.38}
+
+.insights-section:before{
+  background:linear-gradient(120deg,var(--paper) 0%,var(--paper) 76%,rgba(225,238,240,.24) 100%);
+}
+.insights-list .insight-featured{background:linear-gradient(90deg,rgba(225,238,240,.38),rgba(225,238,240,.03))}
+
+@media(max-width:1180px){
+  .hero-content.section-shell{grid-template-columns:minmax(0,55%) minmax(0,45%)}
+  .hero-copy{padding-left:6vw;padding-right:3.5vw}
+  .hero-image{margin-left:-120px;width:calc(100% + 120px)}
+  .hero-image:before{width:210px}
+  .hero h1{font-size:clamp(64px,6.2vw,86px);max-width:620px}
+}
+
+@media(max-width:900px){
+  .hero{min-height:auto;padding-top:70px}
+  .hero-content.section-shell{width:100%;min-height:0;grid-template-columns:1fr}
+  .hero-copy{padding:108px 20px 72px}
+  .hero h1{max-width:700px;margin:40px 0 32px;font-size:clamp(58px,11vw,80px)}
+  .hero-image{min-height:50vh;height:50vh;margin-left:0;width:100%}
+  .hero-image img{object-position:center 50%;filter:saturate(.72) contrast(.92) brightness(1.05)}
+  .hero-image:before{
+    top:0;
+    bottom:auto;
+    width:100%;
+    height:150px;
+    background:linear-gradient(180deg,var(--forest) 0%,rgba(23,63,55,.68) 32%,rgba(23,63,55,.16) 70%,rgba(23,63,55,0) 100%);
+  }
+  .editorial-break-v023{height:46vh;min-height:380px}
+  .brand-interlude{padding:116px 0}
+  .founder-section{background:linear-gradient(180deg,var(--paper) 0%,var(--paper) 48%,rgba(225,238,240,.54) 100%)}
+  .pov-section{background:linear-gradient(160deg,var(--snow),var(--paper) 85%)}
+}
+
+@media(max-width:560px){
+  .hero-copy{padding:90px 16px 60px}
+  .hero h1{font-size:clamp(50px,13.7vw,64px);line-height:.95;margin:34px 0 27px}
+  .hero-image{height:44vh;min-height:340px}
+  .hero-image:before{height:120px}
+  .editorial-break-v023{height:38vh;min-height:300px}
+  .editorial-break-v023 img{object-position:center 50%}
+  .brand-interlude{padding:94px 0}
+}

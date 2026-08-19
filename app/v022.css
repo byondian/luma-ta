@@ -1,0 +1,162 @@
+/* LUMA-TA v0.2.2 — Hero & Imagery Correction
+   Bounded visual override. Core V4 layout and component architecture remain intact. */
+
+.brand-lockup{gap:16px}
+
+/* Hero: one integrated composition rather than a hard split. */
+.hero{min-height:90vh}
+.hero-content.section-shell{
+  width:100%;
+  max-width:none;
+  min-height:calc(90vh - 76px);
+  grid-template-columns:minmax(0,54%) minmax(0,46%);
+  gap:0;
+  margin:0;
+}
+.hero-copy{
+  position:relative;
+  z-index:5;
+  min-width:0;
+  padding:clamp(108px,12vh,150px) 4vw clamp(86px,10vh,122px) 8vw;
+}
+.hero h1{
+  max-width:760px;
+  margin:48px 0 38px;
+  font-size:clamp(72px,6.8vw,112px);
+  line-height:.9;
+}
+.hero-lede{max-width:590px;color:rgba(247,245,239,.84)}
+.hero-actions{margin-top:34px;gap:34px}
+.hero .button-ivory{
+  min-height:48px;
+  padding:0 30px;
+  border:1px solid rgba(247,245,239,.72);
+  letter-spacing:.12em;
+}
+.hero-image{
+  z-index:1;
+  min-height:calc(90vh - 76px);
+  margin:0;
+  margin-left:-130px;
+  width:calc(100% + 130px);
+  background:#edf3f4;
+}
+.hero-image img{
+  object-fit:cover;
+  object-position:center;
+  filter:saturate(.16) contrast(.84) brightness(1.34);
+  transform:scale(1.015);
+}
+.hero-image:before{
+  z-index:4;
+  width:190px;
+  background:linear-gradient(90deg,var(--forest) 0%,rgba(23,63,55,.94) 18%,rgba(23,63,55,.58) 47%,rgba(23,63,55,.16) 76%,rgba(23,63,55,0) 100%);
+}
+.hero-image-wash{
+  z-index:2;
+  background:linear-gradient(120deg,rgba(225,238,240,.05) 0%,rgba(247,245,239,.18) 58%,rgba(247,245,239,.34) 100%);
+}
+
+@media(min-width:901px){
+  .hero h1{white-space:nowrap}
+}
+
+/* The former landscape break is replaced by typographic silence. */
+.brand-interlude{
+  position:relative;
+  overflow:hidden;
+  padding:clamp(138px,14vw,220px) 0;
+  background:linear-gradient(112deg,var(--snow) 0%,rgba(225,238,240,.72) 46%,rgba(247,245,239,.88) 100%);
+  border-top:1px solid rgba(23,63,55,.05);
+  border-bottom:1px solid rgba(23,63,55,.06);
+}
+.brand-interlude:after{
+  content:"";
+  position:absolute;
+  width:46vw;
+  height:46vw;
+  max-width:720px;
+  max-height:720px;
+  right:-18vw;
+  top:50%;
+  transform:translateY(-50%);
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.34) 0%,rgba(255,255,255,0) 70%);
+  pointer-events:none;
+}
+.brand-interlude-inner{position:relative;z-index:1}
+.brand-interlude .eyebrow{margin-bottom:50px}
+.brand-interlude h2{
+  margin:0;
+  max-width:980px;
+  color:var(--forest);
+  font-family:var(--font-serif),Georgia,serif;
+  font-size:clamp(64px,7vw,108px);
+  line-height:.91;
+  font-weight:390;
+  letter-spacing:-.05em;
+}
+
+/* Founder: preserve the improved composition and soften the Paper → Ice transition. */
+.founder-section{
+  background:linear-gradient(102deg,var(--paper) 0%,var(--paper) 42%,rgba(225,238,240,.14) 58%,rgba(225,238,240,.58) 100%);
+}
+
+@media(max-width:1180px){
+  .hero-content.section-shell{grid-template-columns:minmax(0,55%) minmax(0,45%)}
+  .hero-copy{padding-left:6vw;padding-right:3.5vw}
+  .hero-image{margin-left:-100px;width:calc(100% + 100px)}
+  .hero-image:before{width:160px}
+  .hero h1{font-size:clamp(66px,6.7vw,88px);max-width:640px}
+}
+
+@media(max-width:900px){
+  .hero{min-height:auto;padding-top:70px}
+  .hero-content.section-shell{
+    width:100%;
+    min-height:0;
+    grid-template-columns:1fr;
+  }
+  .hero-copy{
+    padding:112px 20px 76px;
+  }
+  .hero h1{
+    white-space:normal;
+    max-width:720px;
+    margin:42px 0 32px;
+    font-size:clamp(60px,11vw,82px);
+  }
+  .hero-lede{max-width:620px}
+  .hero-image{
+    min-height:52vh;
+    height:52vh;
+    margin-left:0;
+    width:100%;
+  }
+  .hero-image img{object-position:center 44%;filter:saturate(.15) contrast(.86) brightness(1.32)}
+  .hero-image:before{
+    top:0;
+    bottom:auto;
+    width:100%;
+    height:130px;
+    background:linear-gradient(180deg,var(--forest) 0%,rgba(23,63,55,.68) 30%,rgba(23,63,55,0) 100%);
+  }
+  .brand-interlude{padding:128px 0}
+  .brand-interlude .eyebrow{margin-bottom:38px}
+  .brand-interlude h2{font-size:clamp(58px,11vw,82px)}
+  .founder-section{background:linear-gradient(180deg,var(--paper) 0%,var(--paper) 50%,rgba(225,238,240,.46) 100%)}
+}
+
+@media(max-width:560px){
+  .brand-lockup{gap:13px}
+  .hero-copy{padding:92px 16px 62px}
+  .hero h1{margin:36px 0 28px;font-size:clamp(52px,14vw,66px);line-height:.94}
+  .hero-lede{font-size:17px;line-height:1.68}
+  .hero-actions{gap:22px;margin-top:30px}
+  .hero .button-ivory{padding:0 24px}
+  .hero-image{height:46vh;min-height:360px}
+  .hero-image:before{height:110px}
+  .brand-interlude{padding:104px 0}
+  .brand-interlude .eyebrow{margin-bottom:32px}
+  .brand-interlude h2{font-size:clamp(50px,14vw,64px);line-height:.94}
+}

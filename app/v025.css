@@ -39,7 +39,8 @@
   filter:none;
 }
 
-/* Founder: preserve the supplied low-resolution portrait at a restrained editorial size. */
+/* Founder: preserve the supplied low-resolution portrait at a restrained editorial size.
+   Non-hero imagery uses a clean hard boundary — no background/image blending. */
 .wf-founder{
   min-height:560px;
   grid-template-columns:44% 56%;
@@ -48,7 +49,7 @@
   min-height:560px;
   display:grid;
   place-items:center;
-  background:linear-gradient(135deg,var(--snow) 0%,#eef3f2 44%,var(--paper) 100%);
+  background:var(--snow);
   padding:52px;
 }
 .wf-founder-photo{

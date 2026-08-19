@@ -23,15 +23,9 @@ export const metadata: Metadata = {
     title: "LUMA-TA | Cross-Border Tax Advisory",
     description: "Tax structuring across borders. Finland ↔ Luxembourg."
   },
-  icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }]
-  }
+  icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }] }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="en">
-      <body className={`${inter.variable} ${newsreader.variable}`}>{children}</body>
-    </html>
-  );
+  return <html lang="en"><body className={`${inter.variable} ${newsreader.variable}`}>{children}</body></html>;
 }

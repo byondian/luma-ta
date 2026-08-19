@@ -28,9 +28,9 @@ const insights = [
   ["PERSPECTIVE", "Tax should follow the transaction — not the other way around", "4 MIN READ"],
 ];
 
-const heroImage = "https://images.unsplash.com/photo-1509837235075-21e7ccdd365c?auto=format&fit=crop&w=1920";
-const calmImage = "https://images.unsplash.com/photo-1698682191120-af117f890379?fm=jpg&ixlib=rb-4.1.0&q=80&w=2400";
-const founderAtmosphereImage = "https://images.unsplash.com/photo-1695624825850-f5307b0006ab?fm=jpg&ixlib=rb-4.1.0&q=80&w=1800";
+const heroImage = "https://images.pexels.com/photos/12474743/pexels-photo-12474743.jpeg?auto=compress&cs=tinysrgb&w=1800";
+const calmImage = "https://images.pexels.com/photos/28820213/pexels-photo-28820213.jpeg?auto=compress&cs=tinysrgb&w=2200";
+const founderAtmosphereImage = "https://images.pexels.com/photos/33303120/pexels-photo-33303120.jpeg?auto=compress&cs=tinysrgb&w=1600";
 
 export default function Home() {
   return (

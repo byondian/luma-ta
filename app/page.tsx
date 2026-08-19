@@ -15,13 +15,15 @@ const principles = [
   ["03", "Partnership", "Senior attention and a direct working relationship throughout."],
 ];
 
-const approvedArchitecture = "/images/hero-approved.jpg";
+const heroImage = "/images/luma-ta/hero-primary.jpg";
+const crossborderImage = "/images/luma-ta/crossborder.jpg";
+const alternateImage = "/images/luma-ta/hero-alternate.jpg";
 const founderPortrait = "/images/oona-approved.avif";
 
 const insights = [
-  ["STRUCTURING", "When does a Luxembourg holding structure make sense for a Finnish business?", "6 MIN READ", approvedArchitecture],
-  ["CROSS-BORDER", "Five questions to ask before restructuring a Finland–Luxembourg group", "5 MIN READ", approvedArchitecture],
-  ["PERSPECTIVE", "Tax should follow the transaction — not the other way around", "4 MIN READ", approvedArchitecture],
+  ["STRUCTURING", "When does a Luxembourg holding structure make sense for a Finnish business?", "6 MIN READ", crossborderImage],
+  ["CROSS-BORDER", "Five questions to ask before restructuring a Finland–Luxembourg group", "5 MIN READ", heroImage],
+  ["PERSPECTIVE", "Tax should follow the transaction — not the other way around", "4 MIN READ", alternateImage],
 ];
 
 export default function Home() {
@@ -39,8 +41,8 @@ export default function Home() {
             <Link className="text-link text-link-light" href="/expertise">Explore our expertise <span>→</span></Link>
           </div>
         </div>
-        <figure className="wf-hero-image" aria-label="Pale stone architecture and reflective water">
-          <Image src={approvedArchitecture} alt="" fill priority sizes="(max-width: 900px) 100vw, 58vw" />
+        <figure className="wf-hero-image" aria-label="Pale architectural surfaces and reflective water">
+          <Image src={heroImage} alt="" fill priority sizes="(max-width: 760px) 100vw, (max-width: 1100px) 51vw, 51vw" />
         </figure>
       </section>
 
@@ -76,8 +78,8 @@ export default function Home() {
             <Link href="/finland-luxembourg">Smooth, efficient collaboration <span>→</span></Link>
           </div>
         </div>
-        <figure className="wf-finlux-image" aria-label="Pale architectural water corridor">
-          <Image src={approvedArchitecture} alt="" fill sizes="(max-width: 900px) 100vw, 52vw" />
+        <figure className="wf-finlux-image" aria-label="Pale architecture and reflective water">
+          <Image src={crossborderImage} alt="" fill sizes="(max-width: 760px) 100vw, 52vw" />
         </figure>
       </section>
 
@@ -98,8 +100,9 @@ export default function Home() {
 
       <section className="wf-founder">
         <figure className="wf-founder-image" aria-label="Founder portrait">
-          <Image src={founderPortrait} alt="Portrait of LUMA-TA founder" fill sizes="(max-width: 900px) 100vw, 44vw" />
-          <span className="wf-founder-tint" aria-hidden="true"></span>
+          <div className="wf-founder-photo">
+            <Image src={founderPortrait} alt="Portrait of LUMA-TA founder" fill sizes="(max-width: 760px) 78vw, 360px" />
+          </div>
         </figure>
         <div className="wf-founder-copy">
           <p className="eyebrow eyebrow-blue">ABOUT LUMA-TA</p>
@@ -116,7 +119,7 @@ export default function Home() {
           {insights.map(([category, title, time, image]) => (
             <article key={title}>
               <figure>
-                <Image src={image} alt="" fill sizes="(max-width: 900px) 42vw, 17vw" />
+                <Image src={image} alt="" fill sizes="(max-width: 760px) 35vw, (max-width: 1100px) 30vw, 17vw" />
               </figure>
               <div>
                 <p className="wf-insight-meta">{category} · {time}</p>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import "./v022.css";
+import "./v023.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-serif", display: "swap" });

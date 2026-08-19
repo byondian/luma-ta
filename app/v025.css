@@ -1,0 +1,121 @@
+/* LUMA-TA v0.2.5 — final approved image asset implementation.
+   Scope: source-image fidelity, intentional crops, stable containers and founder portrait quality only. */
+
+/* Hero: use supplied high-resolution master naturally. */
+.wf-hero{
+  grid-template-columns:49% 51%;
+  min-height:660px;
+  height:min(700px,calc(100vh - 76px));
+}
+.wf-hero-image{
+  background:#e6edef;
+}
+.wf-hero-image img{
+  object-fit:cover;
+  object-position:50% 55%;
+  filter:none;
+}
+.wf-hero-image:before{
+  width:16%;
+  background:linear-gradient(90deg,var(--forest) 0%,rgba(23,63,55,.58) 28%,rgba(23,63,55,.20) 66%,rgba(23,63,55,0) 100%);
+}
+
+/* Finland ↔ Luxembourg: one image, one stable container, no fallback band. */
+.wf-finlux{
+  grid-template-columns:48% 52%;
+  min-height:540px;
+}
+.wf-finlux-copy:after{opacity:.018}
+.wf-finlux-image{
+  min-height:540px;
+  height:540px;
+  background:var(--snow);
+}
+.wf-finlux-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 64%;
+  filter:none;
+}
+
+/* Founder: preserve the supplied low-resolution portrait at a restrained editorial size. */
+.wf-founder{
+  min-height:560px;
+  grid-template-columns:44% 56%;
+}
+.wf-founder-image{
+  min-height:560px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--snow) 0%,#eef3f2 44%,var(--paper) 100%);
+  padding:52px;
+}
+.wf-founder-photo{
+  position:relative;
+  width:min(72%,360px);
+  aspect-ratio:1/1;
+  overflow:hidden;
+}
+.wf-founder-photo img{
+  object-fit:contain;
+  object-position:center;
+  filter:none;
+  transform:none;
+}
+
+/* Insights: supplied architecture family only; quiet, distinct focal crops. */
+.wf-insights-grid img{
+  filter:saturate(.90) contrast(.98) brightness(1.015);
+  transition:transform .35s ease;
+}
+.wf-insights-grid article:hover img{transform:scale(1.015)}
+.wf-insights-grid article:nth-child(1) img{object-position:50% 52%}
+.wf-insights-grid article:nth-child(2) img{object-position:49% 69%}
+.wf-insights-grid article:nth-child(3) img{object-position:57% 62%;filter:saturate(.82) contrast(.98) brightness(1.02)}
+
+@media(max-width:1050px){
+  .wf-hero{grid-template-columns:50% 50%;min-height:620px;height:auto}
+  .wf-hero-image img{object-position:50% 56%}
+  .wf-founder-photo{width:min(76%,340px)}
+}
+
+@media(max-width:760px){
+  .wf-hero{grid-template-columns:1fr;min-height:0;height:auto}
+  .wf-hero-image{
+    height:430px;
+    min-height:430px;
+  }
+  .wf-hero-image img{object-position:50% 58%}
+  .wf-hero-image:before{
+    left:0;
+    right:0;
+    top:0;
+    bottom:auto;
+    width:100%;
+    height:78px;
+    background:linear-gradient(180deg,var(--forest) 0%,rgba(23,63,55,.28) 48%,rgba(23,63,55,0) 100%);
+  }
+
+  .wf-finlux-image{
+    height:auto;
+    min-height:0;
+    aspect-ratio:5/4;
+  }
+  .wf-finlux-image img{object-position:50% 62%}
+
+  .wf-founder-image{
+    min-height:420px;
+    padding:46px 20px;
+  }
+  .wf-founder-photo{width:min(78vw,320px)}
+
+  .wf-insights-grid article:nth-child(1) img{object-position:50% 52%}
+  .wf-insights-grid article:nth-child(2) img{object-position:50% 67%}
+  .wf-insights-grid article:nth-child(3) img{object-position:56% 58%}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .wf-insights-grid img{transition:none}
+  .wf-insights-grid article:hover img{transform:none}
+}

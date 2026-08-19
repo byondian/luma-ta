@@ -4,174 +4,197 @@ import Header from "@/components/Header";
 import { LTMonogram, Wordmark } from "@/components/Brand";
 
 const expertise = [
-  { n: "01", title: "Corporate & International Tax", body: "Luxembourg corporate tax advice for international businesses, groups and investment structures.", topics: ["Corporate structures", "International taxation", "Holding structures", "Financing", "Tax governance"] },
-  { n: "02", title: "Transactions & Restructuring", body: "Tax advice around acquisitions, disposals, reorganisations and changes in ownership or structure.", topics: ["M&A", "Reorganisations", "Business restructurings", "Shareholder structures", "Transaction planning"] },
-  { n: "03", title: "Founders, Owners & Investors", body: "Structuring advice where companies, shareholders, investments and jurisdictions intersect.", topics: ["Founder structures", "Investment vehicles", "Ownership planning", "Cross-border holdings", "Exit considerations"] },
-];
-
-const scenarios = [
-  ["Establishing a Luxembourg structure", "For Finnish businesses or investors considering Luxembourg as part of an international structure."],
-  ["Reorganising an existing group", "Understanding the Luxembourg tax implications of changes in ownership, financing or corporate structure."],
-  ["Investing across borders", "Structuring investments where Finnish stakeholders and Luxembourg entities intersect."],
-  ["Transactions and exits", "Considering tax structure early when businesses or investments are acquired, sold or reorganised."],
+  {
+    n: "01",
+    title: "Corporate & International Tax",
+    body: "Luxembourg corporate tax advice for international businesses, groups and investment structures.",
+  },
+  {
+    n: "02",
+    title: "Transactions & Restructuring",
+    body: "Tax advice around acquisitions, disposals, reorganisations and changes in ownership or structure.",
+  },
+  {
+    n: "03",
+    title: "Founders, Owners & Investors",
+    body: "Structuring advice where companies, shareholders, investments and jurisdictions intersect.",
+  },
 ];
 
 const principles = [
-  ["Commercial first", "Understand the business objective before designing the tax response."],
-  ["Cross-border by design", "Consider the structure as an international question rather than a series of disconnected domestic issues."],
-  ["Clear advice", "Turn complex tax considerations into decisions clients can actually use."],
+  ["Independence", "Direct, objective advice aligned with the client and the commercial decision."],
+  ["Clarity", "Complex tax questions translated into clear, usable decisions."],
+  ["Partnership", "Senior, founder-led attention without unnecessary layers between client and adviser."],
 ];
 
 const insights = [
-  ["STRUCTURING", "When does a Luxembourg holding structure make sense for a Finnish business?", "6 MIN READ"],
-  ["CROSS-BORDER", "Five questions to ask before restructuring a Finland–Luxembourg group", "5 MIN READ"],
-  ["PERSPECTIVE", "Tax should follow the transaction — not the other way around", "4 MIN READ"],
+  ["STRUCTURING", "When does a Luxembourg holding structure make sense for a Finnish business?", "6 MIN READ", "/images/insight-01-approved.webp"],
+  ["CROSS-BORDER", "Five questions to ask before restructuring a Finland–Luxembourg group", "5 MIN READ", "/images/insight-02-approved.webp"],
+  ["PERSPECTIVE", "Tax should follow the transaction — not the other way around", "4 MIN READ", "/images/insight-03-approved.webp"],
 ];
 
-const heroImage = "https://images.pexels.com/photos/12474743/pexels-photo-12474743.jpeg?auto=compress&cs=tinysrgb&w=1800";
-const calmImage = "https://images.pexels.com/photos/28820213/pexels-photo-28820213.jpeg?auto=compress&cs=tinysrgb&w=2200";
-const founderAtmosphereImage = "https://images.pexels.com/photos/33303120/pexels-photo-33303120.jpeg?auto=compress&cs=tinysrgb&w=1600";
+const heroImage = "/images/hero-approved.webp";
+const bridgeImage = "/images/finland-luxembourg-approved.webp";
+const founderImage = "/images/oona-approved.webp";
 
 export default function Home() {
   return (
     <main>
-      <div className="hero-wrap">
-        <Header variant="hero" />
-        <section className="hero" aria-labelledby="hero-title">
-          <div className="hero-content section-shell">
-            <div className="hero-copy reveal">
-              <p className="eyebrow eyebrow-ice">FINLAND <span>↔</span> LUXEMBOURG</p>
-              <h1 id="hero-title">Tax structuring<br />across borders.</h1>
-              <p className="hero-lede">Independent cross-border tax advice for Finnish businesses, founders and investors with Luxembourg interests.</p>
-              <div className="hero-actions">
-                <Link className="button button-ivory" href="/contact">Book a conversation</Link>
-                <Link className="text-link text-link-light" href="/expertise">Explore our expertise <span>→</span></Link>
-              </div>
-              <div className="hero-signature"><LTMonogram light className="hero-mini-mark" /><span>Luxembourg-based<br />Finnish perspective</span></div>
-            </div>
-            <figure className="hero-image reveal" aria-label="Luminous architectural study">
-              <Image src={heroImage} alt="" fill priority sizes="(max-width: 900px) 100vw, 43vw" />
-              <div className="hero-image-wash" aria-hidden="true"></div>
-              <figcaption>LIGHT · CLARITY · PERSPECTIVE</figcaption>
-            </figure>
-          </div>
-        </section>
-      </div>
+      <Header variant="light" />
 
-      <section className="section section-shell central-idea">
-        <div className="section-kicker"><span className="rule"></span><p className="eyebrow eyebrow-blue">CROSS-BORDER DECISIONS</p></div>
-        <div className="split-copy">
-          <h2>Tax is rarely the<br />starting point.</h2>
-          <div className="body-large">
+      <section className="hero hero-approved" aria-labelledby="hero-title">
+        <div className="hero-content hero-approved-grid">
+          <div className="hero-copy">
+            <p className="eyebrow eyebrow-ice">FINLAND <span>↔</span> LUXEMBOURG</p>
+            <h1 id="hero-title">Tax structuring<br />across borders.</h1>
+            <p className="hero-lede">Independent cross-border tax advice for Finnish businesses, founders and investors with Luxembourg interests.</p>
+            <div className="hero-actions">
+              <Link className="button button-ivory" href="/contact">Book a conversation</Link>
+              <Link className="text-link text-link-light" href="/expertise">Explore our expertise <span>→</span></Link>
+            </div>
+          </div>
+          <figure className="hero-image hero-image-approved" aria-label="Pale stone architecture and reflective water in soft daylight">
+            <Image src={heroImage} alt="" fill priority sizes="(max-width: 900px) 100vw, 56vw" />
+            <span className="hero-image-blend" aria-hidden="true"></span>
+          </figure>
+        </div>
+      </section>
+
+      <section className="section central-idea approved-central">
+        <div className="section-shell approved-two-col">
+          <h2>Tax is rarely<br />the starting point.</h2>
+          <div className="body-large approved-central-copy">
             <p>A transaction, investment, restructuring or expansion usually begins with a commercial objective. The tax structure should support that objective — not dictate it.</p>
             <p>LUMA-TA helps Finnish businesses, founders and investors understand the Luxembourg side of the equation and structure cross-border decisions with clarity.</p>
           </div>
         </div>
       </section>
 
-      <section className="section section-shell expertise-section" id="expertise">
-        <div className="section-heading-row"><p className="eyebrow">HOW LUMA-TA CAN HELP</p><p className="section-note">Focused advice where business, ownership and jurisdictions meet.</p></div>
-        <div className="expertise-grid">
-          {expertise.map((item) => (
-            <article className="expertise-item" key={item.n}>
-              <span className="expertise-number" aria-hidden="true">{item.n}</span>
-              <div className="expertise-content">
+      <section className="section expertise-section approved-expertise" id="expertise">
+        <div className="section-shell">
+          <div className="section-heading-row approved-heading-row">
+            <p className="eyebrow">OUR EXPERTISE</p>
+            <p className="section-note">Focused advice where business, ownership and jurisdictions meet.</p>
+          </div>
+          <div className="expertise-grid approved-expertise-grid">
+            {expertise.map((item) => (
+              <article className="expertise-item approved-expertise-item" key={item.n}>
+                <span className="expertise-number" aria-hidden="true">{item.n}</span>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
-                <ul>{item.topics.map((topic) => <li key={topic}>{topic}</li>)}</ul>
-                <Link className="text-link" href="/expertise">Explore <span>→</span></Link>
-              </div>
-            </article>
-          ))}
+                <Link className="text-link" href="/expertise">Learn more <span>→</span></Link>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="section geo-section">
-        <div className="geo-grid-lines" aria-hidden="true"></div>
-        <div className="section-shell geo-inner">
-          <div className="geo-wordmark" aria-label="Finland to Luxembourg"><span>FINLAND</span><b>↔</b><span>LUXEMBOURG</span></div>
-          <div className="geo-intro">
-            <h2>One question.<br />Two jurisdictions.</h2>
-            <div className="body-large">
-              <p>Cross-border structures rarely fit neatly within one country&apos;s tax system.</p>
-              <p>LUMA-TA brings Luxembourg expertise together with a Finnish perspective, helping clients identify the issues that arise when business, ownership, capital and investment cross borders.</p>
-              <Link className="text-link strong-link" href="/finland-luxembourg">FINLAND ↔ LUXEMBOURG EXPERTISE <span>→</span></Link>
+      <section className="geo-section approved-geo" aria-labelledby="geo-title">
+        <div className="approved-geo-grid">
+          <div className="approved-geo-copy">
+            <p className="eyebrow eyebrow-blue">FINLAND ↔ LUXEMBOURG</p>
+            <h2 id="geo-title">Finland ↔ Luxembourg.<br />A natural connection.</h2>
+            <p>Cross-border structures rarely fit neatly within one country&apos;s tax system. LUMA-TA brings Luxembourg expertise together with a Finnish perspective.</p>
+            <div className="approved-geo-links">
+              <Link href="/finland-luxembourg">Strategic cross-border structures <span>→</span></Link>
+              <Link href="/finland-luxembourg">Smooth, efficient collaboration <span>→</span></Link>
             </div>
           </div>
-          <div className="scenario-grid">
-            {scenarios.map(([title, body], i) => <article key={title}><span>0{i + 1}</span><h3>{title}</h3><p>{body}</p></article>)}
-          </div>
-          <div className="geo-coordinates" aria-hidden="true"><span>60.1699° N · 24.9384° E</span><span>49.6116° N · 6.1319° E</span></div>
-        </div>
-      </section>
-
-      <figure className="editorial-break">
-        <Image src={calmImage} alt="Still water beneath a pale, misty horizon" fill sizes="100vw" />
-        <div className="editorial-break-overlay" aria-hidden="true"></div>
-        <figcaption><span>Stillness in perspective.</span><span>Clarity in decisions.</span></figcaption>
-      </figure>
-
-      <section className="section direct-section">
-        <div className="section-shell">
-          <p className="eyebrow eyebrow-ice">A DIFFERENT KIND OF TAX ADVISER</p>
-          <div className="split-copy direct-intro">
-            <h2>Direct advice.<br />Senior attention.</h2>
-            <div className="body-large"><p>LUMA-TA is intentionally focused.</p><p>Clients work directly with the adviser responsible for understanding the transaction, structure or tax question — without unnecessary layers between the client and the advice.</p></div>
-          </div>
-          <div className="principles-grid">
-            {principles.map(([title, body], i) => <article key={title}><span className="number">0{i + 1}</span><h3>{title}</h3><p>{body}</p></article>)}
-          </div>
-        </div>
-      </section>
-
-      <section className="section founder-section">
-        <div className="section-shell founder-grid">
-          <figure className="founder-visual" aria-label="Light-filled founder portrait placeholder">
-            <Image src={founderAtmosphereImage} alt="" fill sizes="(max-width: 900px) 100vw, 42vw" />
-            <div className="founder-visual-frame" aria-hidden="true"><LTMonogram className="founder-watermark" /></div>
+          <figure className="approved-geo-image" aria-label="Pale architectural water corridor with controlled perspective">
+            <Image src={bridgeImage} alt="" fill sizes="(max-width: 900px) 100vw, 50vw" />
           </figure>
-          <div className="founder-copy">
-            <div className="founder-label"><LTMonogram className="founder-section-mark" /><p className="eyebrow eyebrow-blue">FOUNDER</p></div>
-            <h2>Oona Jokinen</h2>
-            <p className="founder-role">Founder · International Tax Adviser</p>
-            <div className="body-large compact"><p>Oona is a Luxembourg-based tax adviser focused on corporate and international tax matters.</p><p>Her approach brings Luxembourg tax capability together with a Finnish perspective and a direct, founder-led way of working.</p><p>For clients, the objective is simple: clear advice that supports the commercial decision.</p></div>
-            <Link className="text-link" href="/about">About LUMA-TA <span>→</span></Link>
+        </div>
+      </section>
+
+      <section className="direct-section approved-direct" aria-labelledby="direct-title">
+        <div className="section-shell approved-direct-grid">
+          <h2 id="direct-title">Direct advice.<br />Senior attention.</h2>
+          <div className="approved-principles">
+            {principles.map(([title, body], index) => (
+              <article key={title}>
+                <span className="number">0{index + 1}</span>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="pov-section">
-        <div className="section-shell pov-inner">
-          <LTMonogram className="pov-mark" />
-          <p>The commercial decision comes first.<br /><span>Tax should support it.</span></p>
+      <section className="founder-section approved-founder" aria-labelledby="founder-title">
+        <div className="approved-founder-grid">
+          <figure className="approved-founder-image" aria-label="Portrait of LUMA-TA founder Oona Jokinen">
+            <Image src={founderImage} alt="Oona Jokinen" fill sizes="(max-width: 900px) 100vw, 44vw" />
+            <span className="approved-founder-wash" aria-hidden="true"></span>
+          </figure>
+          <div className="approved-founder-copy">
+            <p className="eyebrow eyebrow-blue">ABOUT LUMA-TA</p>
+            <h2 id="founder-title">Founded by<br />Oona Jokinen</h2>
+            <div className="body-large compact">
+              <p>Oona is a Luxembourg-based tax adviser focused on corporate and international tax matters.</p>
+              <p>Her approach brings Luxembourg tax capability together with a Finnish perspective and a direct, founder-led way of working.</p>
+            </div>
+            <Link className="text-link" href="/about">Read more about Oona <span>→</span></Link>
+          </div>
         </div>
       </section>
 
-      <section className="section section-shell insights-section">
-        <div className="section-heading-row"><p className="eyebrow">PERSPECTIVES</p><Link className="text-link" href="/insights">All insights <span>→</span></Link></div>
-        <h2>Cross-border tax,<br />explained clearly.</h2>
-        <div className="insights-list">
-          {insights.map(([category, title, time], i) => <article className={i === 0 ? "insight-featured" : ""} key={title}><span className="number">0{i + 1}</span><div><p className={`article-meta meta-${i + 1}`}>{category}</p><h3>{title}</h3></div><div className="article-action"><span>{time}</span><Link className="text-link" href="/insights">Read <b>→</b></Link></div></article>)}
+      <section className="section insights-section approved-insights" aria-labelledby="insights-title">
+        <div className="section-shell">
+          <div className="section-heading-row approved-heading-row">
+            <div>
+              <p className="eyebrow">INSIGHTS</p>
+              <h2 id="insights-title">Cross-border tax,<br />explained clearly.</h2>
+            </div>
+            <Link className="text-link" href="/insights">View all insights <span>→</span></Link>
+          </div>
+          <div className="approved-insight-grid">
+            {insights.map(([category, title, time, image]) => (
+              <article key={title} className="approved-insight-card">
+                <figure>
+                  <Image src={image} alt="" fill sizes="(max-width: 760px) 100vw, 33vw" />
+                </figure>
+                <div className="approved-insight-copy">
+                  <p className="article-meta">{category} · {time}</p>
+                  <h3>{title}</h3>
+                  <Link className="text-link" href="/insights">Read article <span>→</span></Link>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="conversion-section">
-        <div className="section-shell conversion-inner">
-          <p className="eyebrow eyebrow-ice">START A CONVERSATION</p>
-          <h2>Planning something<br />across borders?</h2>
-          <p>If a transaction, structure or investment connects Finland and Luxembourg, it is usually worth considering the tax implications early.</p>
-          <div className="conversion-actions"><Link className="button button-ivory" href="/contact">Book a conversation</Link><span>Finland ↔ Luxembourg</span></div>
-          <LTMonogram light className="conversion-mark" />
+      <section className="conversion-section approved-conversion">
+        <div className="section-shell approved-conversion-inner">
+          <h2>Let&apos;s discuss your<br />international ambitions.</h2>
+          <Link className="button button-ivory" href="/contact">Book a conversation</Link>
         </div>
       </section>
 
-      <footer className="footer">
-        <div className="section-shell footer-grid">
-          <div className="footer-brand"><LTMonogram light className="footer-mark" /><Wordmark light showDescriptor /><p>FINLAND <span>↔</span> LUXEMBOURG</p></div>
-          <div className="footer-nav"><Link href="/expertise">Expertise</Link><Link href="/finland-luxembourg">Finland ↔ Luxembourg</Link><Link href="/about">About</Link><Link href="/insights">Insights</Link><Link href="/contact">Contact</Link></div>
-          <div className="footer-nav footer-secondary"><span>Privacy</span><span>Legal Notice</span><span>Terms</span><span>FI&nbsp;&nbsp; EN</span></div>
-          <div className="footer-contact"><p>luma-ta.com</p><p>Luxembourg</p></div>
-          <div className="footer-legal"><p>© 2026 LUMA-TA. All rights reserved.</p><p>Legal entity, registration, business permit and regulatory information will be published once verified.</p></div>
+      <footer className="footer approved-footer">
+        <div className="section-shell approved-footer-grid">
+          <div className="footer-brand approved-footer-brand">
+            <div className="approved-footer-logo"><LTMonogram className="footer-mark" /><Wordmark showDescriptor /></div>
+            <p>Independent cross-border tax advice for Finnish businesses, founders and investors with Luxembourg interests.</p>
+          </div>
+          <div className="footer-nav">
+            <Link href="/expertise">Expertise</Link>
+            <Link href="/finland-luxembourg">Finland ↔ Luxembourg</Link>
+            <Link href="/about">About</Link>
+          </div>
+          <div className="footer-nav">
+            <Link href="/insights">Insights</Link>
+            <Link href="/contact">Contact</Link>
+          </div>
+          <div className="footer-contact">
+            <p>luma-ta.com</p>
+            <p>Luxembourg</p>
+          </div>
+          <div className="footer-legal">
+            <p>© 2026 LUMA-TA. All rights reserved.</p>
+            <p>Legal entity, registration, business permit and regulatory information will be published once verified.</p>
+          </div>
         </div>
       </footer>
     </main>

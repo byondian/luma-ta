@@ -1,0 +1,26 @@
+LUMA-TA approved architectural image masters
+Locked implementation pass: 19 August 2026
+
+hero-primary.jpg
+Source: Pexels photo 22674234 by Kadir Avsar
+Approved supplied master: 2672 x 4000
+SHA-256: d71b45a8ccaf7299447842c3b38f3ea919e32eefeb36c860ba446f6d7a7bd6df
+Use: primary hero image.
+
+hero-alternate.jpg
+Source: Pexels photo 34404940 by Sergei Gussev
+Approved supplied master: 4032 x 3021
+SHA-256: 7b99605fc339dc18de4b78c7d57ed86411408df21ec847315692d5e62bea1b62
+Use: alternate crop source and Insight 3 only in this release.
+
+crossborder.jpg
+Source: Pexels photo 37219342 by Mariam Gomurashvili
+Approved supplied master: 2268 x 4032
+SHA-256: ffd028788f29fcf23be46d2d4d75bfc1934ffbbecd89226c896fb6a09bf2f683
+Use: Finland ↔ Luxembourg section and Insight 1.
+
+Usage note
+These are atmospheric editorial architecture images. They do not depict LUMA-TA premises and must not be captioned as Finland, Luxembourg, an office, or a client location.
+
+Founder portrait
+The current founder image remains a temporary low-resolution supplied portrait. Do not upscale, recolour, tint or treat it as a final portrait master. Replace it when Oona supplies the high-resolution original.

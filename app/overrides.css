@@ -1,0 +1,2 @@
+/* Release QA overrides: do not expose unverified destinations. */
+.founder-copy > a[href="#"] { display: none; }

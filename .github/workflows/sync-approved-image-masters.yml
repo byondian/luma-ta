@@ -1,0 +1,59 @@
+name: Sync approved LUMA-TA image masters
+
+on:
+  push:
+    branches:
+      - v0.2.5-final-image-assets
+    paths-ignore:
+      - 'public/images/luma-ta/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-masters:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out release branch
+        uses: actions/checkout@v4
+
+      - name: Download approved Pexels source masters
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p public/images/luma-ta
+          curl -L --fail --retry 3 --retry-delay 2 \
+            'https://images.pexels.com/photos/22674234/pexels-photo-22674234.jpeg' \
+            -o public/images/luma-ta/hero-primary.jpg
+          curl -L --fail --retry 3 --retry-delay 2 \
+            'https://images.pexels.com/photos/34404940/pexels-photo-34404940.jpeg' \
+            -o public/images/luma-ta/hero-alternate.jpg
+          curl -L --fail --retry 3 --retry-delay 2 \
+            'https://images.pexels.com/photos/37219342/pexels-photo-37219342.jpeg' \
+            -o public/images/luma-ta/crossborder.jpg
+
+      - name: Verify approved source identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > /tmp/luma-ta-approved.sha256 <<'EOF'
+          d71b45a8ccaf7299447842c3b38f3ea919e32eefeb36c860ba446f6d7a7bd6df  public/images/luma-ta/hero-primary.jpg
+          7b99605fc339dc18de4b78c7d57ed86411408df21ec847315692d5e62bea1b62  public/images/luma-ta/hero-alternate.jpg
+          ffd028788f29fcf23be46d2d4d75bfc1934ffbbecd89226c896fb6a09bf2f683  public/images/luma-ta/crossborder.jpg
+          EOF
+          sha256sum -c /tmp/luma-ta-approved.sha256
+
+      - name: Commit masters if absent
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- public/images/luma-ta && git ls-files --error-unmatch public/images/luma-ta/hero-primary.jpg >/dev/null 2>&1; then
+            echo 'Approved masters already present.'
+            exit 0
+          fi
+          git config user.name 'byondian-release-bot'
+          git config user.email 'ian@byond.global'
+          git add public/images/luma-ta/hero-primary.jpg public/images/luma-ta/hero-alternate.jpg public/images/luma-ta/crossborder.jpg
+          git commit -m 'assets(v0.2.5): add approved high-resolution image masters'
+          git push origin HEAD:v0.2.5-final-image-assets

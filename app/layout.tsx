@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
-import "./overrides.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-serif", display: "swap" });
@@ -18,7 +17,14 @@ export const metadata: Metadata = {
     siteName: "LUMA-TA",
     type: "website"
   },
-  icons: { icon: "/favicon.svg" }
+  twitter: {
+    card: "summary_large_image",
+    title: "LUMA-TA | Cross-Border Tax Advisory",
+    description: "Tax structuring across borders. Finland ↔ Luxembourg."
+  },
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }]
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

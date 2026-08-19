@@ -15,10 +15,13 @@ const principles = [
   ["03", "Partnership", "Senior attention and a direct working relationship throughout."],
 ];
 
+const approvedArchitecture = "/images/hero-approved.jpg";
+const founderPortrait = "/images/oona-approved.avif";
+
 const insights = [
-  ["STRUCTURING", "When does a Luxembourg holding structure make sense for a Finnish business?", "6 MIN READ", "/images/luma-hero-v024.avif"],
-  ["CROSS-BORDER", "Five questions to ask before restructuring a Finland–Luxembourg group", "5 MIN READ", "/images/luma-finlux-v024.avif"],
-  ["PERSPECTIVE", "Tax should follow the transaction — not the other way around", "4 MIN READ", "/images/luma-hero-v024.avif"],
+  ["STRUCTURING", "When does a Luxembourg holding structure make sense for a Finnish business?", "6 MIN READ", approvedArchitecture],
+  ["CROSS-BORDER", "Five questions to ask before restructuring a Finland–Luxembourg group", "5 MIN READ", approvedArchitecture],
+  ["PERSPECTIVE", "Tax should follow the transaction — not the other way around", "4 MIN READ", approvedArchitecture],
 ];
 
 export default function Home() {
@@ -37,7 +40,7 @@ export default function Home() {
           </div>
         </div>
         <figure className="wf-hero-image" aria-label="Pale stone architecture and reflective water">
-          <Image src="/images/luma-hero-v024.avif" alt="" fill priority sizes="(max-width: 900px) 100vw, 58vw" />
+          <Image src={approvedArchitecture} alt="" fill priority sizes="(max-width: 900px) 100vw, 58vw" />
         </figure>
       </section>
 
@@ -74,7 +77,7 @@ export default function Home() {
           </div>
         </div>
         <figure className="wf-finlux-image" aria-label="Pale architectural water corridor">
-          <Image src="/images/luma-finlux-v024.avif" alt="" fill sizes="(max-width: 900px) 100vw, 52vw" />
+          <Image src={approvedArchitecture} alt="" fill sizes="(max-width: 900px) 100vw, 52vw" />
         </figure>
       </section>
 
@@ -95,7 +98,7 @@ export default function Home() {
 
       <section className="wf-founder">
         <figure className="wf-founder-image" aria-label="Founder portrait">
-          <Image src="/images/oona-founder-v024.avif" alt="" fill sizes="(max-width: 900px) 100vw, 44vw" />
+          <Image src={founderPortrait} alt="Portrait of LUMA-TA founder" fill sizes="(max-width: 900px) 100vw, 44vw" />
           <span className="wf-founder-tint" aria-hidden="true"></span>
         </figure>
         <div className="wf-founder-copy">

@@ -28,8 +28,9 @@ const insights = [
   ["PERSPECTIVE", "Tax should follow the transaction — not the other way around", "4 MIN READ"],
 ];
 
-const heroImage = "https://images.pexels.com/photos/10873994/pexels-photo-10873994.jpeg?auto=compress&cs=tinysrgb&w=1800";
-const founderAtmosphereImage = "https://images.pexels.com/photos/33303120/pexels-photo-33303120.jpeg?auto=compress&cs=tinysrgb&w=1600";
+const heroImage = "/images/luma-hero-v023.webp";
+const editorialImage = "/images/luma-editorial-v023.webp";
+const founderAtmosphereImage = "/images/luma-founder-placeholder-v023.webp";
 
 export default function Home() {
   return (
@@ -47,7 +48,7 @@ export default function Home() {
                 <Link className="text-link text-link-light" href="/expertise">Explore our expertise <span>→</span></Link>
               </div>
             </div>
-            <figure className="hero-image reveal" aria-label="Abstract frosted glass in pale winter light">
+            <figure className="hero-image reveal" aria-label="Pale glass and stone in soft winter light">
               <Image src={heroImage} alt="" fill priority sizes="(max-width: 900px) 100vw, 48vw" />
               <div className="hero-image-wash" aria-hidden="true"></div>
             </figure>
@@ -101,6 +102,11 @@ export default function Home() {
           <div className="geo-coordinates" aria-hidden="true"><span>60.1699° N · 24.9384° E</span><span>49.6116° N · 6.1319° E</span></div>
         </div>
       </section>
+
+      <figure className="editorial-break editorial-break-v023" aria-label="Pale glass and stone in soft Nordic daylight">
+        <Image src={editorialImage} alt="" fill sizes="100vw" />
+        <div className="editorial-break-wash" aria-hidden="true"></div>
+      </figure>
 
       <section className="brand-interlude" aria-labelledby="brand-interlude-title">
         <div className="section-shell brand-interlude-inner">

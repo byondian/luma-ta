@@ -28,8 +28,7 @@ const insights = [
   ["PERSPECTIVE", "Tax should follow the transaction — not the other way around", "4 MIN READ"],
 ];
 
-const heroImage = "https://images.pexels.com/photos/12474743/pexels-photo-12474743.jpeg?auto=compress&cs=tinysrgb&w=1800";
-const calmImage = "https://images.pexels.com/photos/28820213/pexels-photo-28820213.jpeg?auto=compress&cs=tinysrgb&w=2200";
+const heroImage = "https://images.pexels.com/photos/10873994/pexels-photo-10873994.jpeg?auto=compress&cs=tinysrgb&w=1800";
 const founderAtmosphereImage = "https://images.pexels.com/photos/33303120/pexels-photo-33303120.jpeg?auto=compress&cs=tinysrgb&w=1600";
 
 export default function Home() {
@@ -47,12 +46,10 @@ export default function Home() {
                 <Link className="button button-ivory" href="/contact">Book a conversation</Link>
                 <Link className="text-link text-link-light" href="/expertise">Explore our expertise <span>→</span></Link>
               </div>
-              <div className="hero-signature"><LTMonogram light className="hero-mini-mark" /><span>Luxembourg-based<br />Finnish perspective</span></div>
             </div>
-            <figure className="hero-image reveal" aria-label="Luminous architectural study">
-              <Image src={heroImage} alt="" fill priority sizes="(max-width: 900px) 100vw, 43vw" />
+            <figure className="hero-image reveal" aria-label="Abstract frosted glass in pale winter light">
+              <Image src={heroImage} alt="" fill priority sizes="(max-width: 900px) 100vw, 48vw" />
               <div className="hero-image-wash" aria-hidden="true"></div>
-              <figcaption>LIGHT · CLARITY · PERSPECTIVE</figcaption>
             </figure>
           </div>
         </section>
@@ -105,11 +102,12 @@ export default function Home() {
         </div>
       </section>
 
-      <figure className="editorial-break">
-        <Image src={calmImage} alt="Still water beneath a pale, misty horizon" fill sizes="100vw" />
-        <div className="editorial-break-overlay" aria-hidden="true"></div>
-        <figcaption><span>Stillness in perspective.</span><span>Clarity in decisions.</span></figcaption>
-      </figure>
+      <section className="brand-interlude" aria-labelledby="brand-interlude-title">
+        <div className="section-shell brand-interlude-inner">
+          <p className="eyebrow eyebrow-blue">OUR APPROACH</p>
+          <h2 id="brand-interlude-title">Clear structures.<br />Clear decisions.</h2>
+        </div>
+      </section>
 
       <section className="section direct-section">
         <div className="section-shell">

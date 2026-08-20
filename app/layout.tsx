@@ -3,26 +3,27 @@ import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import "./v024.css";
 import "./v025.css";
+import "./v026.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-serif", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://luma-ta.com"),
-  title: { default: "LUMA-TA | Cross-Border Tax Advisory", template: "%s | LUMA-TA" },
-  description: "Independent cross-border tax advice for Finnish businesses, founders and investors with Luxembourg interests.",
-  keywords: ["Luxembourg tax advisory", "Finland Luxembourg tax", "Luxembourg corporate tax", "cross-border tax advisory", "Luxembourg tax structuring", "Finnish business Luxembourg"],
+  title: { default: "LUMA-TA | Tax & Corporate Advisory", template: "%s | LUMA-TA" },
+  description: "Practical Luxembourg tax and corporate advice for entrepreneurs, families and businesses with international interests.",
+  keywords: ["Luxembourg tax advisory", "Luxembourg corporate advisory", "Luxembourg establishment", "Luxembourg corporate governance", "Finland Luxembourg advisory", "cross-border tax advisory"],
   openGraph: {
-    title: "LUMA-TA | Cross-Border Tax Advisory",
-    description: "Tax structuring across borders. Finland ↔ Luxembourg.",
+    title: "LUMA-TA | Tax & Corporate Advisory",
+    description: "Practical Luxembourg tax and corporate advice for entrepreneurs, families and businesses with international interests.",
     url: "https://luma-ta.com",
     siteName: "LUMA-TA",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "LUMA-TA | Cross-Border Tax Advisory",
-    description: "Tax structuring across borders. Finland ↔ Luxembourg."
+    title: "LUMA-TA | Tax & Corporate Advisory",
+    description: "Practical Luxembourg tax and corporate advice for entrepreneurs, families and businesses with international interests."
   },
   icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }] }
 };

@@ -20,7 +20,7 @@ export function Wordmark({ light = false, className = "", showDescriptor = false
   return (
     <span className={`wordmark ${light ? "wordmark-light" : "wordmark-dark"} ${className}`.trim()}>
       <span className="wordmark-main"><span>LUMA</span><span className="wordmark-hyphen">-</span><span>TA</span></span>
-      {showDescriptor ? <span className="wordmark-descriptor">Cross-Border Tax Advisory</span> : null}
+      {showDescriptor ? <span className="wordmark-descriptor">Tax & Corporate Advisory</span> : null}
     </span>
   );
 }

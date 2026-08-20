@@ -112,12 +112,12 @@ export default function Home() {
       <section className="wf-founder">
         <figure className="wf-founder-image" aria-label="Founder portrait">
           <div className="wf-founder-photo">
-            <Image src={founderPortrait} alt="Portrait of LUMA-TA founder" fill sizes="(max-width: 760px) 78vw, 360px" />
+            <Image src={founderPortrait} alt="Portrait of Oona Jokinen, founder of LUMA-TA" fill sizes="(max-width: 760px) 78vw, 360px" />
           </div>
         </figure>
         <div className="wf-founder-copy">
           <p className="eyebrow eyebrow-blue">FOUNDER</p>
-          <h2>Oona</h2>
+          <h2>Oona Jokinen</h2>
           <p className="wf-founder-role">Founder · Tax & Corporate Adviser</p>
           <p>LUMA-TA helps entrepreneurs, families and businesses establish, manage and develop their interests in Luxembourg with practical, personal advice.</p>
           <p>Drawing on experience across family office, tax, legal and corporate governance matters, Oona brings together the different considerations involved in establishing and operating a Luxembourg presence — and coordinates with the right local specialists where additional expertise is required.</p>
